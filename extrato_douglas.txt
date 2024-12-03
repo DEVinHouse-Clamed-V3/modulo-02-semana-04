@@ -1,0 +1,9 @@
+extrato_movimentacoes = [
+    {"data": "2023-01-01", "descricao": "Depósito", "valor": 1000.00},
+    {"data": "2023-01-05", "descricao": "Saque", "valor": -200.00},
+    {"data": "2023-01-10", "descricao": "Pagamento", "valor": -150.00},
+    {"data": "2023-01-15", "descricao": "Transferência", "valor": -300.00},
+    {"data": "2023-01-20", "descricao": "Depósito", "valor": 500.00},
+    {"data": "2023-01-25", "descricao": "Saque", "valor": -100.00},
+    {"data": "2023-01-30", "descricao": "Pagamento", "valor": -50.00}
+]
