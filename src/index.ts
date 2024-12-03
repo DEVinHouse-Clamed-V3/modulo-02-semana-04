@@ -1,31 +1,20 @@
-import { inss } from "./operacoes";
+import Funcionario from "./classes/Funcionario";
 
-function soma(a: number, b: number) {
-  const resultado = a + b;
-  return resultado;
-}
+const joao = new Funcionario(
+  "João",
+  new Date("2021-01-01"),
+  "Desenvolvedor",
+  5000,
+);
 
-function f(a: number, c: number,b?: number) {}
-
-const showMessage = (message: string) => {};
-
-function makeOperations(a: number, b: number) {
-  const soma = a + b;
-  const multiplicacao = a * b;
-  const divisao = a / b;
-
-  return { soma, multiplicacao, divisao };
-}
-
-function calcularAreaRetangulo(base: number, altura: number) {
-  const alturaBaseDoTriangulo = 10.5;
-  return (base * altura) / alturaBaseDoTriangulo;
-}
-
-const pessoa = {
-  nome: "Fulano",
-  idade: 30,
-  email: "h@mail.com",
-};
-
-console.log(pessoa.nome);
+const ana = new Funcionario(
+  "Ana",
+  new Date("2021-01-01"),
+  "Desenvolvedor",
+  5000,
+  new Date("1990-01-01"),
+  "Rua 1",
+  "85991999999",
+  "h@gmail.com",
+  new Date("2025-01-01"),
+);
