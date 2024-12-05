@@ -1,6 +1,6 @@
 import { randomUUID } from "crypto";
 
-export default class Funcionario {
+export default abstract class Funcionario {
   readonly matricula: string;
 
   private nome: string;
