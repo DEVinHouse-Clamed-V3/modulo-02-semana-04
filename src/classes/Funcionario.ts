@@ -2,7 +2,7 @@ import { randomUUID } from "crypto";
 
 export default abstract class Funcionario {
   readonly matricula: string;
-  
+
   private nome: string;
   private dataAdmissao: Date;
   private cargo: string;
@@ -13,6 +13,7 @@ export default abstract class Funcionario {
   private endereco?: string;
   private telefone?: string;
   private email?: string;
+  private status: boolean = true;
 
   constructor(
     nome: string,
@@ -38,6 +39,15 @@ export default abstract class Funcionario {
     this.telefone = telefone;
     this.email = email;
     this.dataFerias = dateFerias;
+  }
+
+
+  getStatus() { return this.status; }
+ 
+  setStatus(status: boolean) { this.status = status; }
+
+  getMatricula() {
+    return this.matricula;
   }
 
   getNome() {

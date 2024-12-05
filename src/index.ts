@@ -1,3 +1,4 @@
+import Empresa from "./classes/Empresa";
 import Funcionario from "./classes/Funcionario";
 import { Escala, FuncionarioFixo } from "./classes/FuncionarioFixo";
 import { FuncionarioHorista } from "./classes/FuncionarioHorista";
@@ -27,8 +28,16 @@ const henrique = new FuncionarioFixo(
 joao.setHorasTrabalhadas(100)
 joao.setHorasTrabalhadas(200)
 
-console.log(joao.setPeriodoFimContrato(new Date("2029-01-31")))
 
-console.log(joao.getSalario())
+const microsoft = new Empresa("Microsoft", "123456789")
+
+microsoft.contratarFuncionario(henrique)
+microsoft.contratarFuncionario(joao)
+
+microsoft.demitirFuncionario(henrique)
+
+console.log(microsoft.getFuncionarios())
+
+
 
 
