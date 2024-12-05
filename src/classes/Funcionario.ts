@@ -6,7 +6,8 @@ export default class Funcionario {
   private nome: string;
   private dataAdmissao: Date;
   private cargo: string;
-  private salario: number;
+  protected salario: number;
+
   private dataNascimento?: Date;
   private dataFerias?: Date;
   private endereco?: string;
