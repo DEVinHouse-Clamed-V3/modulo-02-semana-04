@@ -14,7 +14,8 @@ export default class Calculadora {
     }
 
     dividir(valorA: number, valorB: number) {
-        if (valorB === 0) {
+        const ZERO = 0;
+        if (valorB === ZERO) {
             return "Não é possível dividir por zero"
         }
 
@@ -22,6 +23,7 @@ export default class Calculadora {
     }
 
     porcentagem(valor: number, porcentagem: number) {
-        return  valor * (porcentagem / 100)
+        const PERCENT_DIVISOR = 100;
+        return valor * (porcentagem / PERCENT_DIVISOR)
     }
 }

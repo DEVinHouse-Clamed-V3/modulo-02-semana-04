@@ -1,8 +1,11 @@
 import Funcionario from "./Funcionario";
 
+const HORAS_INICIAIS = 0;
+
 export class FuncionarioHorista extends Funcionario {
+  
   private valorHora: number;
-  private horasTrabalhadas: number = 0;
+  private horasTrabalhadas: number = HORAS_INICIAIS
   private periodoContrato: {
     inicio: Date;
     fim: Date;

@@ -2,7 +2,7 @@ import { randomUUID } from "crypto";
 
 export default abstract class Funcionario {
   readonly matricula: string;
-
+  
   private nome: string;
   private dataAdmissao: Date;
   private cargo: string;
