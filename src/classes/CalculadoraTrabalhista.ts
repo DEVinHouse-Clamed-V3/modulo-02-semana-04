@@ -9,6 +9,18 @@ const ALIQUOTA_INSS_FAIXA_2 = 9;
 const ALIQUOTA_INSS_FAIXA_1 = 7.5;
 const PERCENTUAL = 100;
 
+const ISENCAO_TOTAL_IR = 0;
+
+const LIMITE_ISENCAO_IR = 2112;
+const LIMITE_FAIXA_1_IR = 2826.65;
+const LIMITE_FAIXA_2_IR = 3751.05;
+const LIMITE_FAIXA_3_IR = 4664.68;
+
+const ALIQUOTA_IR_FAIXA_1 = 0.075;
+const ALIQUOTA_IR_FAIXA_2 = 0.15;
+const ALIQUOTA_IR_FAIXA_3 = 0.225;
+const ALIQUOTA_IR_FAIXA_4 = 0.275;
+
 export default class CalculadoraTrabalhista  {
 
     static calcularInss(salarioBruto: number) {
@@ -30,13 +42,14 @@ export default class CalculadoraTrabalhista  {
     }
 
    static calcularImpostoDeRenda(renda: number): number {
-        let imposto = 0
-        const LIMITE_ISENCAO_IR = 2112;
-        if (renda <= LIMITE_ISENCAO_IR) imposto = 0;
-        else if (renda <= 2826.65) imposto = renda * 0.075;
-        else if (renda <= 3751.05) imposto =  renda * 0.15;
-        else if (renda <= 4664.68) imposto = renda * 0.225;
-        else return imposto =  renda * 0.275;
+       
+        let imposto = ISENCAO_TOTAL_IR;
+      
+        if (renda <= LIMITE_ISENCAO_IR) imposto = ISENCAO_TOTAL_IR;
+        else if (renda <= LIMITE_FAIXA_1_IR) imposto = renda * ALIQUOTA_IR_FAIXA_1;
+        else if (renda <= LIMITE_FAIXA_2_IR) imposto =  renda * ALIQUOTA_IR_FAIXA_2;
+        else if (renda <= LIMITE_FAIXA_3_IR) imposto = renda * ALIQUOTA_IR_FAIXA_3;
+        else return imposto =  renda * ALIQUOTA_IR_FAIXA_4;
         return imposto
     };
 
