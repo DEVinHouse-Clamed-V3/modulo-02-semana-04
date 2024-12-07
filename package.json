@@ -2,7 +2,7 @@
   "name": "aula-base",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "eslint": "npx eslint .",
     "fix": "npx eslint --fix",
@@ -20,5 +20,8 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.17.0"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0"
   }
 }

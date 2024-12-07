@@ -1,4 +1,5 @@
 import Funcionario from "./Funcionario";
+import {differenceInDays} from 'date-fns'
 
 const HORAS_INICIAIS = 0;
 
@@ -51,5 +52,9 @@ export class FuncionarioHorista extends Funcionario {
 
   getSalario() {
     return this.horasTrabalhadas * this.valorHora  
+  }
+
+  getDiasTrabalhados() {
+   return differenceInDays(this.periodoContrato.fim, this.periodoContrato.inicio)
   }
 }

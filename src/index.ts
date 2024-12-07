@@ -19,7 +19,7 @@ const henrique = new FuncionarioFixo(
 
  const joao = new FuncionarioHorista(
   60, 
-  {inicio: new Date("2025-01-01"), fim: new Date("2026-01-31")},
+  {inicio: new Date("2024-01-01"), fim: new Date("2024-03-01")},
   "João",
   "Desenvolvedor",
   0
@@ -36,7 +36,7 @@ microsoft.contratarFuncionario(joao)
 
 microsoft.demitirFuncionario(henrique)
 
-console.log(microsoft.getFuncionarios())
+console.log(joao.getDiasTrabalhados())
 
 
 
